@@ -22,3 +22,5 @@ jobs:
         run: pwd
       - name: whoami
         run: whoami
+      - name: Check Disk Usage
+        run: df -kh  

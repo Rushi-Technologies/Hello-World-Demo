@@ -11,17 +11,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Hello World Step
-        run: echo "Hello, World!"
-      - name: Step Two
-        run: echo "This is another step in the workflow."
-      - name: Display Date
-        run: date
-      - name: List Files
-        run: ls -la
-      - name: Show Current Directory
-        run: pwd
-      - name: whoami
-        run: whoami       
+        run: | 
+          echo "Hello, World!"
+          echo "This is another step in the workflow." > hello.txt
+          date
+          ls -la
+          pwd
+          whoami
+          cat hello.txt  
+      - name: Additional Step
+        run: echo "This is an additional step in the hello world job."
+
   deploy_job:
     runs-on: ubuntu-latest
     steps:
@@ -32,11 +32,9 @@ jobs:
   hello_world_test:
     runs-on: ubuntu-latest
     steps:
-      - name: Test Step
-        run: echo "This is a test step in the hello world test job."
-      - name: Step Two Test
-        run: echo "This is another step in the test job."
-      - name: Display Date Test
-        run: date
-      - name: List Files Test
-        run: ls -la
+      - name: Hello World Test Step
+        run: | 
+         echo "This is a test step in the hello world test job."
+         echo "This is another step in the test job."
+         date
+         ls -la

@@ -21,4 +21,13 @@ jobs:
       - name: Show Current Directory
         run: pwd
       - name: whoami
-        run: whoami
+        run: whoami         
+  hello_world_test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Test Step
+        run: echo "This is a test step in the hello world test job."
+      - name: Step Two Test
+        run: echo "This is another step in the test job."
+      - name: Display Date Test
+        run: date

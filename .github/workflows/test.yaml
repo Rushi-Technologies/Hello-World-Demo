@@ -1,0 +1,23 @@
+name: Test Workflow
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  test_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Test Step One
+        run: echo "This is test step one."
+      - name: Test Step Two
+        run: echo "This is test step two."
+      - name: Show Current Directory Test
+        run: pwd
+      - name: List Files Test
+        run: ls -la
+      - name: Display Date Test
+        run: date
+      - name: whoami Test
+        run: whoami

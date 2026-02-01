@@ -11,30 +11,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Hello World Step
-        run: | 
-          echo "Hello, World!"
-          echo "This is another step in the workflow." > hello.txt
-          date
-          ls -la
-          pwd
-          whoami
-          cat hello.txt  
+        run: ls -lar
       - name: Additional Step
         run: echo "This is an additional step in the hello world job."
-
-  deploy_job:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Deploy Step
-        run: echo "Deploying application..."
-      - name: Deployment Complete
-        run: echo "Deployment complete!"        
-  hello_world_test:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Hello World Test Step
-        run: | 
-         echo "This is a test step in the hello world test job."
-         echo "This is another step in the test job."
-         date
-         ls -la

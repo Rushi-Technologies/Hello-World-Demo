@@ -13,11 +13,7 @@ jobs:
     steps:
       - name: Checkout Code 
         uses: actions/checkout@v5
-      - name: Hello World Step
-        run: ls -lar
-      - name: Excuete Demo Script
+      - name: Step level example
         run: |
-          chmod +x ./demo.sh
-          ./demo.sh  
-      - name: Additional Step
-        run: echo "This is an additional step in the hello world job."
+          echo "City is $CITY"
+          echo "Trainer is $TRAINER"

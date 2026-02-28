@@ -6,22 +6,30 @@ on:
     branches:
       - main
       - development
-
+env:
+  BRAND: Rushi Technologies
+  PLATFORM: GitHub
+  
 jobs:
   hello_world_job:
     runs-on: ubuntu-latest
+    env:
+      CITY: Hyderabad
+      TRAINER: Balaji Reddy
     steps:
       - name: Checkout Code 
         uses: actions/checkout@v5
       - name: Step level example
-        env:
-          CITY: Hyderabad
-          TRAINER: Balaji Reddy
         run: |
           echo "City is $CITY"
           echo "Trainer is $TRAINER"
+          echo "Brand is $BRAND"
       - name: Next step
         run: echo "City is $CITY and Trainer is $TRAINER"
       - name: Printing Some Default Varaibles
         run: echo "Gihub Repo $GITHUB_REPOSITORY Gihub Ref $GITHUB_REF  Github Commit $GITHUB_SHA"
-       
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Step One in test Job
+      run: echo "Platform is $PLATFORM"

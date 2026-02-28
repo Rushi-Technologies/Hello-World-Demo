@@ -18,3 +18,5 @@ jobs:
         run: date
       - name: whoami Test
         run: whoami
+      - name: Print Repo Vars
+        run: "Tomcat IP ${var.TOMCATIP} Username: ${var.USERNMAE}"

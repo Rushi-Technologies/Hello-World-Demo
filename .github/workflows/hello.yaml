@@ -28,6 +28,8 @@ jobs:
         run: echo "Tomcat IP ${{vars.TOMCATIP }}"
       - name:  Print username
         run: echo "USERNAME ${{ vars.USERNAME }}"
+      - name: Print SOANRQubeToken
+        run:  echo "SOnarQubeToken ${{secrets.SONARQUBETTOKEN}}"
       - name: Next step
         run: echo "City is $CITY and Trainer is $TRAINER"
       - name: Printing Some Default Varaibles

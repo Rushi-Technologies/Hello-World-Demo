@@ -19,4 +19,6 @@ jobs:
       - name: whoami Test
         run: whoami
       - name: Print Repo Vars
-        run: "Tomcat IP ${var.TOMCATIP} Username: ${var.USERNMAE}"
+        run: echo "Tomcat IP ${{vars.TOMCATIP }}"
+      - name:  Print username
+        run: echo "USERNAME ${{ vars.USERNAME }}"

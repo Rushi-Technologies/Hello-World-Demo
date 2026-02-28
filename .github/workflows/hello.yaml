@@ -25,7 +25,9 @@ jobs:
           echo "Trainer is $TRAINER"
           echo "Brand is $BRAND"
       - name: Print Repo Vars
-        run: "Tomcat IP ${var.TOMCATIP} Username: ${var.USERNMAE}"    
+        run: echo "Tomcat IP ${{vars.TOMCATIP }}"
+      - name:  Print username
+        run: echo "USERNAME ${{ vars.USERNAME }}"
       - name: Next step
         run: echo "City is $CITY and Trainer is $TRAINER"
       - name: Printing Some Default Varaibles
